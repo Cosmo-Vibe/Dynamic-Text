@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Style Text Editor</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <button
+          class="palette-button"
+          style="background-color: #000000; color: #ffffff"
+          data-bg="#000000"
+          data-text="#FFFFFF"
+          data-bar="#950101"
+          data-thumb="#FF0000"
+          data-placeholder="#3D0000"
+        >
+          Palette 1
+        </button>
+        <button
+          class="palette-button"
+          style="background-color: #222831; color: #eeeeee"
+          data-bg="#222831"
+          data-text="#EEEEEE"
+          data-bar="#FD7014"
+          data-thumb="#EEEEEE"
+          data-placeholder="#393E46"
+        >
+          Palette 2
+        </button>
+        <button
+          class="palette-button"
+          style="background-color: #000000; color: #ff8ba0"
+          data-bg="#000000"
+          data-text="#FF8BA0"
+          data-bar="#E41F7B"
+          data-thumb="#FF8BA0"
+          data-placeholder="#86003C"
+        >
+          Palette 3
+        </button>
+        <button
+          class="palette-button"
+          style="background-color: #222831; color: #00fff5"
+          data-bg="#222831"
+          data-text="#00FFF5"
+          data-bar="#00ADB5"
+          data-thumb="#00FFF5"
+          data-placeholder="#393E46"
+        >
+          Palette 4
+        </button>
+        <button
+          class="palette-button"
+          style="background-color: #000000; color: #8e05c2"
+          data-bg="#000000"
+          data-text="#8E05C2"
+          data-bar="#700B97"
+          data-thumb="#8E05C2"
+          data-placeholder="#3E065F"
+        >
+          Palette 5
+        </button>
+        <button
+          class="palette-button"
+          style="background-color: #2a2438; color: #dbd8e3"
+          data-bg="#2A2438"
+          data-text="#DBD8E3"
+          data-bar="#5C5470"
+          data-thumb="#DBD8E3"
+          data-placeholder="#352F44"
+        >
+          Palette 6
+        </button>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <div class="slider-container">
+          <label for="font-selector">Choose Font:</label>
+          <select id="font-selector">
+            <option value="Arial">Arial</option>
+            <option value="Georgia">Georgia</option>
+            <option value="Courier New">Courier New</option>
+            <option value="Verdana">Verdana</option>
+            <option value="Times New Roman">Times New Roman</option>
+          </select>
+        </div>
+
+        <div class="font-loader-container">
+          <label for="font-url-input">Font URL:</label>
+          <input
+            type="text"
+            id="font-url-input"
+            class="font-url-input"
+            placeholder="Enter Google Font URL"
+            style="width: 70%"
+          />
+          <button id="apply-font-button" class="apply-font-button">
+            Apply Font
+          </button>
+        </div>
+
+        <div class="container">
+          <input type="text" placeholder="Input your text tittle here" />
+          <div class="slider-container">
+            <label for="font-size-slider">Font Size:</label>
+            <input
+              type="range"
+              id="font-size-slider"
+              min="20"
+              max="40"
+              value="20"
+            />
+          </div>
+          <div class="slider-container">
+            <label for="letter-spacing-slider">Letter Spacing:</label>
+            <input
+              type="range"
+              id="letter-spacing-slider"
+              min="0"
+              max="10"
+              value="0"
+            />
+          </div>
+          <div class="slider-container">
+            <label for="word-spacing-slider">Word Spacing:</label>
+            <input
+              type="range"
+              id="word-spacing-slider"
+              min="0"
+              max="20"
+              value="0"
+            />
+          </div>
+          <div class="slider-container">
+            <label for="line-height-slider">Line Height:</label>
+            <input
+              type="range"
+              id="line-height-slider"
+              min="1"
+              max="2"
+              step="0.1"
+              value="1"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="text-editor">
+        <div class="editable-text" contenteditable="true" id="display-text">
+          You can modify this text here. It will change according to your
+          settings.
+        </div>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

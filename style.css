@@ -1,0 +1,214 @@
+/* Root Variables */
+:root {
+  --font-size: 20px;
+  --letter-spacing: 0px;
+  --word-spacing: 0px;
+  --line-height: normal;
+  --bg-color: #000000; /* Default background color */
+  --text-color: #ffffff; /* Default text color */
+  --placeholder-color: #3d0000; /* Default placeholder color */
+  --slider-bar-color: #950101; /* Default slider bar color */
+  --slider-thumb-color: #ff0000; /* Default slider thumb color */
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header,
+h1,
+h2 {
+  color: var(--text-color);
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  background-color: var(--placeholder-color);
+  color: var(--text-color);
+  border: 2px solid rgba(255, 255, 255, 0.5); /* Dynamically change based on text color */
+  font-size: var(--font-size);
+  letter-spacing: var(--letter-spacing);
+  word-spacing: var(--word-spacing);
+  line-height: var(--line-height);
+  text-align: center;
+  outline: none;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+input[type="text"]::placeholder {
+  color: rgba(255, 255, 255, 0.5); /* Lighten the text color for placeholder */
+}
+
+.slider-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3rem;
+}
+
+.display-text {
+  width: 90%;
+  margin: auto;
+  text-align: justify;
+  padding: 2rem;
+  font-size: var(--font-size);
+  letter-spacing: var(--letter-spacing);
+  word-spacing: var(--word-spacing);
+  line-height: var(--line-height);
+  border: 2px solid var(--text-color);
+  border-radius: 10px;
+  overflow-wrap: break-word;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+}
+
+.palette-button {
+  padding: 10px 20px;
+  border: none;
+  background-color: transparent;
+  color: var(--text-color);
+  cursor: pointer;
+  transition: background-color 0.3s;
+  outline: none;
+}
+
+.palette-button:hover {
+  opacity: 0.8;
+}
+
+/* Unique slider styles */
+#font-size-slider,
+#letter-spacing-slider,
+#word-spacing-slider,
+#line-height-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 8px;
+  background: var(--slider-bar-color);
+  outline: none;
+}
+
+#font-size-slider::-webkit-slider-thumb {
+  width: 20px;
+  height: 20px;
+  background: var(--slider-thumb-color);
+  border-radius: 50%;
+}
+
+#letter-spacing-slider::-webkit-slider-thumb {
+  width: 15px;
+  height: 15px;
+  background: var(--slider-thumb-color);
+  border-radius: 30%;
+}
+
+#word-spacing-slider::-webkit-slider-thumb {
+  width: 25px;
+  height: 25px;
+  background: var(--slider-thumb-color);
+  border-radius: 5px;
+}
+
+#line-height-slider::-webkit-slider-thumb {
+  width: 30px;
+  height: 30px;
+  background: var(--slider-thumb-color);
+  border-radius: 15%;
+}
+
+input[type="range"]::-moz-range-thumb {
+  background: var(--slider-thumb-color);
+  border: none;
+  cursor: pointer;
+}
+
+.text-editor {
+  width: 90%;
+  margin: 3rem auto;
+  text-align: center;
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 600px) {
+  .container,
+  .text-editor {
+    width: 95%;
+    padding: 10px;
+  }
+
+  header,
+  .nav {
+    flex-direction: column;
+  }
+}
+
+select {
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border: 2px solid var(--text-color);
+}
+
+select:hover {
+  opacity: 0.8;
+}
+
+.font-loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+.font-url-input {
+  width: calc(70% - 20px);
+  padding: 10px;
+  margin: 0 10px;
+  border-radius: 5px;
+  border: 2px solid var(--text-color);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  outline: none;
+}
+
+.apply-font-button {
+  padding: 10px 20px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border: 2px solid var(--text-color);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.apply-font-button:hover {
+  opacity: 0.8;
+}
